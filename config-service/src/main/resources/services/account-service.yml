@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    database: MYSQL
+    properties.hibernate.temp.use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: create
+    properties:
+  datasource:
+    platform: mysql
+    url: jdbc:mysql://host.docker.internal:3306/account_service_database?useSSL=false
+    username: bestuser
+    password: bestuser
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  servlet:
+    context-path: /accounts
+  port: 8081
